@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+<div class="container">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <img src="<%= post.image%>" alt="img" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="container ">
+            <div class="col-12 bg-dark text-light text-center">
+                <h1 class="py-2"><%=post.title%></h1>
+            </div>
+        </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-12">
+            <p class="lead"><%=post.description%></p>
+            <button class="btn btn-warning rounded-0"><%=post.tag%></button>
+        </div>
+        
+        </div>
+    </div>
+</div>
+<%- include('partials/footer') %>

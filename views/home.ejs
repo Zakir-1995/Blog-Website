@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+ <div class="container">
+     <div class="container pt-5">
+         <div class="py-5 bg-dark text-light text-center">
+             <h1 class="py-5 display-5">A Freelancer Success Story</h1>
+         </div>
+     </div>
+       <% posts.map(post=>{ %>
+
+            <div class="container">
+                <div class="row mx-1 mt-4 border py-2">
+                <div class="col-md-3  ">
+                    <a href="/blogs/<%= post._id%>">
+                   <img src="<%= post.image%>" alt="image" class="img-fluid">
+                </a>
+                </div>
+                <div class="col-md-9 title ">
+                    <h2><a  href="/blogs/<%= post._id%>"><%=post.title%></a></h2>
+                    <p><%= post.description%></p>
+                    <a href="/blogs/<%= post._id%>">
+                    <button class="btn bg-dark text-light rounded-0">Read More...</button>
+                    </a>
+                </div>
+               </div>
+       
+            </div>
+
+     <%   }) %>
+
+ </div>
+    <%- include('partials/footer') %>

@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+<div class="container">
+    <div class="container mt-5">
+        <div class="bg-dark text-light ">
+            <h1 class="text-center py-3">
+                New Post
+            </h1>
+            <div class="p-5">
+                <form class="row g-3" action="/blogs" method="POST">
+                    <div class="col-md-6">
+                      <label for="title" class="form-label">Post Title</label>
+                      <input type="text" name="title" class="form-control" id="title">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="tag" class="form-label">Post Tag</label>
+                      <input type="text" name="tag" class="form-control" id="tag">
+                    </div>
+                    <div class="col-12">
+                      <label for="image" class="form-label">Image Url</label>
+                      <input type="text" name="image" class="form-control" id="image">
+                    </div>
+                    <div class="col-12">
+                      <label for="description" class="form-label">Description</label>
+                      <textarea type="text" name="description" rows="4" class="form-control" id="description"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn w-100 btn-primary">Publish</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<%- include('partials/footer') %>
